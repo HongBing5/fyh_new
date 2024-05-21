@@ -37,6 +37,11 @@ const products = [{
   id: 8,
   name: '电容检测阵列',
   imageUrl: require('../assets/images/电容检测阵列.jpg')
+},
+{
+  id: 9,
+  name: '柔性电流检测板',
+  imageUrl: require('../assets/images/柔性电流检测板.jpg')
 }
   // 添加更多
 ]

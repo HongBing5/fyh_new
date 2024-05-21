@@ -47,6 +47,14 @@ const products = [{
     { url: require('../assets/images/电容检测阵列.jpg') }
   ],
   description: ' '
+},
+{
+  id: 6,
+  name: '柔性电流检测板',
+  image: [
+    { url: require('../assets/images/柔性电流检测板.jpg') }
+  ],
+  description: ' '
 }
   // 可根据需求添加更多商品
 ]
