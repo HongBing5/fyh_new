@@ -36,7 +36,8 @@ const products = [{
   id: 4,
   name: '25通道高压切换阵列',
   image: [
-    { url: require('../assets/images/25通道高压切换阵列.jpg') }
+    { url: require('../assets/images/25通道高压切换阵列/正面.png') },
+    { url: require('../assets/images/25通道高压切换阵列/内部图.jpg') }
   ],
   description: ' '
 },
