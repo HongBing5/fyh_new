@@ -1,8 +1,8 @@
 <template>
-  <div class="product-list">
+  <div class="product-list con-edge">
     <div class="product" v-for="(product, index) in products" :key="index">
      <router-link :to="{ name: 'ProductDetail', params: { id: product.id }}">
-        <img :src="product.image[0].url" :alt="product.name">
+        <div class="pic"><img :src="product.image[0].url" :alt="product.name"></div>
         <div class="product-details">
           <h3 class="title">{{ product.name }}</h3>
           <p>{{ product.description }}</p>
@@ -34,21 +34,31 @@ export default {
 }
 
 .product {
-  width: 300px;
+  width: 280px;
   margin: 20px 0;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
 }
-
-.product img {
+.product .pic{
+  display: flex;
   width: 100%;
-  height: auto;
+  height: 200px;
+  justify-content: center;
+  overflow: hidden;
+}
+.product img {
   border-radius: 5px;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
 }
 
 .product-details {
-  text-align: center;
+  display: flex;
+  /* text-align: center; */
+  justify-content: center;
 }
 /* 标题存在下划线 */
 .title{

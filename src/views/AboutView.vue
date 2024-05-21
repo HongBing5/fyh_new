@@ -2,14 +2,14 @@
   <div class="about">
     <!-- 顶部横图 -->
     <div class="top-image">
-      <img src="@/assets/images/background.jpg"  class="top-image">
+      <img src="@/assets/images/background.jpg" class="top-image">
     </div>
 
     <!-- 中间内容区域 -->
     <div class="content">
       <!-- 左侧图片 -->
       <div class="left">
-        <img src="@/assets/images/company01.jpg"  class="left-image">
+        <img src="@/assets/images/company01.jpg" class="con-image">
       </div>
 
       <!-- 右侧内容 -->
@@ -18,10 +18,12 @@
         <p class="description">{{ company.description }}</p>
         <div class="items">
           <div v-for="item in company.items" :key="item.id" class="item">
+            <i :class="item.icon"></i>
             <li>{{ item.title }}: {{ item.description }}</li>
           </div>
         </div>
       </div>
+
     </div>
 
     <!-- 底部联系信息 -->
@@ -51,9 +53,9 @@ export default {
         name: '北京飞奕豪科技有限公司',
         description: '一家电路板，设计，开发，制作的公司',
         items: [
-          { id: 1, title: '加工', description: '各种电路板的加工' },
-          { id: 2, title: '修改', description: '重新抄写电路板' },
-          { id: 2, title: '研发', description: '电路版设计' }
+          { id: 1, title: '加工', description: '各种电路板的加工', icon: 'iconfont icon-jiagong' },
+          { id: 2, title: '修改', description: '重新抄写电路板', icon: 'iconfont icon-xiugai' },
+          { id: 2, title: '研发', description: '电路版设计', icon: 'iconfont icon-jijiagong' }
           // 可以继续添加项目
         ],
         address: '超前路23号',
@@ -71,6 +73,7 @@ export default {
   /* 顶部横图 */
   margin-top: 40px;
 }
+
 .top-image img {
   width: 100%;
   height: 400px;
@@ -79,50 +82,72 @@ export default {
 
 .content {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   margin-top: 20px;
+  padding: 0 5%;
 }
+
 .left {
   flex: 1;
 }
-.left-image {
+
+.con-image {
   width: 100%;
-  margin-left: 10%;
+  min-width: 320px;
 }
+
 .right {
   flex: 2;
   margin-left: 20px;
+  padding-top: 20px;
 }
+
 .right h2 {
-  font-size: 24px;
+  font-size: 28px;
   margin-bottom: 10px;
 }
-.description{
+
+.right p {
+  opacity: .8;
+}
+
+.description {
   padding-bottom: 20px;
 }
+
 .items {
+  display: flex;
+  justify-content: space-evenly;
   margin-bottom: 20px;
   text-align: center;
-
+  list-style: none;
 }
+
 .item {
+  margin-top: 40px;
   margin-bottom: 10px;
+}
+
+/* 业务描述图标 */
+.item i {
+  font-size: 110px;
+  color: rgb(14, 50, 70);
 }
 
 .contact {
-  margin-top: 20px;
+  margin-top: 45px;
 }
+
 .contact h2 {
   font-size: 24px;
 }
+
 .contact-info {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-evenly;
   height: 200px;
   align-items: center;
-}
-.info-item {
-  flex: 1
+  font-size: 18px;
 }
 </style>

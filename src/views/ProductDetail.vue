@@ -1,8 +1,8 @@
 <template>
-  <div>
+  <div class="con-edge">
     <el-page-header @back="goBack" content="详情" class="header"></el-page-header>
-    <div class="product-detail"  v-if="!loading">
-      <h1 >{{ product.name }}</h1>
+    <div class="product-detail" v-if="product">
+      <h1>{{ product.name }}</h1>
       <!-- 产品简单介绍 -->
       <div class="details">
         <p>{{ product.description }}</p>
@@ -10,7 +10,7 @@
       <!-- 循环添加文件对应图片 -->
       <div class="gallery">
         <el-row>
-          <el-col :span="12" v-for="(item, index) in product.image" :key="index">
+          <el-col :span="10" v-for="(item, index) in product.image" :key="index">
             <el-image :src="item.url" :alt="item.alt" fit="cover"></el-image>
           </el-col>
         </el-row>
@@ -19,9 +19,9 @@
       <h2 v-if="product.pdfUrl || product.videoUrl">附件：</h2>
       <div class="attachments">
         <!-- 如果有PDF文件 -->
-        <div v-if="product.pdfUrl" >
+        <div v-if="product.pdfUrl">
           <h3>PDF文件：</h3>
-          <el-button  type="primary" icon="el-icon-download" @click="downloadPDF">查看PDF说明</el-button>
+          <el-button type="primary" icon="el-icon-download" @click="downloadPDF">查看PDF说明</el-button>
         </div>
 
         <!-- 如果有视频文件 -->
@@ -34,11 +34,7 @@
         </div>
       </div>
     </div>
-    <div v-else  v-loading="loading">
-    <!-- 加载动画或占位符 -->
 
-    <p>若刷新失败可以尝试返回主页重新进入...</p>
-  </div>
   </div>
 </template>
 
@@ -51,26 +47,37 @@ export default {
     return {
       products,
       product: null,
-      loading: true // 初始状态为加载中
+      // loading: true,
+      id: 0
     }
   },
 
-  async  created () {
-    await this.getProductById(this.$route.params.id)
-    this.loading = false // 数据加载完成后将 loading 状态设置为 false
+  created () {
+    this.id = this.$route.params.id
+    this.getProductData()
   },
   methods: {
+    getProductData () {
+      // 从本地存储中获取数据
+      const storedData = localStorage.getItem(`pageData_${this.id}`)
+      if (storedData) {
+        this.product = JSON.parse(storedData)
+        // this.loading = false
+      } else {
+        this.getProductById(this.id)
+      }
+    },
     getProductById (id) {
-      console.log(id)// 路由拿过来的id
-      console.log(this.products)
       this.product = this.products.find(item => item.id === id)
-      console.log(this.product)
+      // 将数据存储到本地存储
+      localStorage.setItem(`pageData_${id}`, JSON.stringify(this.product))
+      // this.loading = false
     },
     // 返回上一页面
     goBack () {
       this.$router.go(-1)
     },
-    // 下载在新窗口打开pdf文件
+    // 下载在新窗口打开 pdf 文件
     downloadPDF () {
       window.open(this.product.pdfUrl)
     }

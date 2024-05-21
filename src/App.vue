@@ -95,7 +95,9 @@ nav img {
   max-width: 1200px;
   margin: 0 auto;
 }
-
+.con-edge{
+  padding: 0 40px
+}
 /* 返回顶部按钮 */
 .scroll-to-top {
   position: fixed;
