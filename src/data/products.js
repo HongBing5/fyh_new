@@ -7,8 +7,7 @@ const products = [{
     { url: require('../assets/images/医学模拟系统/产品01_反面.png') }
   ],
   description: ' ',
-  pdfUrl: '../assets/pdf/第二版插头布置图和接线方案.pdf',
-  videoUrl: '../assets/videos/test01.mp4'
+  pdfUrl: '../assets/pdf/第二版插头布置图和接线方案.pdf'
 },
 {
   id: 2,
