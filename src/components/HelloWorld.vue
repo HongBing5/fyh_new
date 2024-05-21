@@ -31,7 +31,7 @@ export default {
 }
 
 .el-carousel__item {
-  width: 1500px;
+  /* width: 1500px; */
   min-width: 300px;
 }
 
