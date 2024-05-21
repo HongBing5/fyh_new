@@ -8,6 +8,7 @@ const products = [{
   ],
   description: ' ',
   pdfUrl: '../assets/pdf/第二版插头布置图和接线方案.pdf'
+  // videoUrl: false
 },
 {
   id: 2,
