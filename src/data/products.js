@@ -52,7 +52,7 @@ const products = [{
   id: 6,
   name: '柔性电流检测板',
   image: [
-    { url: require('../assets/images/柔性电流检测板.jpg') }
+    { url: require('../assets/images/柔性电流检测板.png') }
   ],
   description: ' '
 }
