@@ -42,6 +42,11 @@ const products = [{
   id: 9,
   name: '柔性电流检测板',
   imageUrl: require('../assets/images/柔性电流检测板.png')
+},
+{
+  id: 10,
+  name: '显示阵列驱动',
+  imageUrl: require('../assets/images/显示阵列驱动.jpg')
 }
   // 添加更多
 ]

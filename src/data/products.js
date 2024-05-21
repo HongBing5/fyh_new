@@ -56,6 +56,14 @@ const products = [{
     { url: require('../assets/images/柔性电流检测板.png') }
   ],
   description: ' '
+},
+{
+  id: 7,
+  name: '显示阵列驱动',
+  image: [
+    { url: require('../assets/images/显示阵列驱动.jpg') }
+  ],
+  description: ' '
 }
   // 可根据需求添加更多商品
 ]
