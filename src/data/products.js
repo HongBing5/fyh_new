@@ -2,7 +2,7 @@ const products = [{
   id: 1,
   name: '医学模拟系统',
   image: [
-    { url: require('../assets/images/show03.png'), alt: 'Image1' },
+    { url: require('../assets/images/医学模拟系统/产品左上视角图.png'), alt: 'Image1' },
     { url: require('../assets/images/医学模拟系统/产品01_正面.png'), alt: 'Image2' },
     { url: require('../assets/images/医学模拟系统/产品01_反面.png') }
   ],
@@ -14,7 +14,7 @@ const products = [{
   id: 2,
   name: '四通道低温温控仪',
   image: [
-    { url: require('../assets/images/show02.png') },
+    { url: require('../assets/images/四通道低温温控仪/产品02前.png') },
     { url: require('../assets/images/四通道低温温控仪/产品02后.png') }
   ],
   description: ' ',

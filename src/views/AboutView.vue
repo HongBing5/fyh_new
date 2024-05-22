@@ -9,7 +9,8 @@
     <div class="content">
       <!-- 左侧图片 -->
       <div class="left">
-        <img src="@/assets/images/company01.jpg" class="con-image">
+        <img src="@/assets/images/company/company01.jpg" class="con-image">
+        <img src="@/assets/images/company/company03.jpg" class="con-image">
       </div>
 
       <!-- 右侧内容 -->
@@ -22,12 +23,13 @@
             <li>{{ item.title }}: {{ item.description }}</li>
           </div>
         </div>
+        <h2>地址：超前路23号</h2>
       </div>
 
     </div>
 
     <!-- 底部联系信息 -->
-    <div class="contact">
+    <!-- <div class="contact">
       <h2>联 系 信 息</h2>
       <div class="contact-info">
         <div class="info-item">
@@ -39,9 +41,8 @@
         <div class="info-item">
           <strong><el-button type="primary" icon="el-icon-phone"></el-button></strong> {{ company.phone }}
         </div>
-        <!-- 可以根据需要添加更多联系信息 -->
       </div>
-    </div>
+    </div> -->
   </div>
 </template>
 
@@ -54,13 +55,13 @@ export default {
         description: '一家电路板，设计，开发，制作的公司',
         items: [
           { id: 1, title: '加工', description: '各种电路板的加工', icon: 'iconfont icon-jiagong' },
-          { id: 2, title: '修改', description: '重新抄写电路板', icon: 'iconfont icon-xiugai' },
+          // { id: 2, title: '修改', description: '重新抄写电路板', icon: 'iconfont icon-xiugai' },
           { id: 2, title: '研发', description: '电路版设计', icon: 'iconfont icon-jijiagong' }
           // 可以继续添加项目
         ],
         address: '超前路23号',
-        email: '暂无',
-        phone: '暂无'
+        email: ' ',
+        phone: ' '
       }
     }
   }
