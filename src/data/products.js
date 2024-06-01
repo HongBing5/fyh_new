@@ -61,7 +61,10 @@ const products = [{
   id: 7,
   name: '显示阵列驱动',
   image: [
-    { url: require('../assets/images/显示阵列驱动.jpg') }
+    { url: require('../assets/images/显示阵列驱动/01.png') },
+    { url: require('../assets/images/显示阵列驱动/02.png') },
+    { url: require('../assets/images/显示阵列驱动/显示阵列驱动.jpg') },
+    { url: require('../assets/images/显示阵列驱动/03.png') }
   ],
   description: ' '
 }
