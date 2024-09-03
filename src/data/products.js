@@ -67,6 +67,17 @@ const products = [{
     { url: require('../assets/images/显示阵列驱动/03.png') }
   ],
   description: ' '
+},
+{
+  id: 8,
+  name: '4一25通道温控仪',
+  image: [
+    { url: require('../assets/images/4一25通道温控仪/4一25通道温控仪.png') },
+    { url: require('../assets/images/4一25通道温控仪/4一25通道温控仪-前面.png') },
+    { url: require('../assets/images/4一25通道温控仪/4一25通道温控仪-后面.png') }
+
+  ],
+  description: ' '
 }
   // 可根据需求添加更多商品
 ]

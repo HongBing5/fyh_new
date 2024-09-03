@@ -67,6 +67,11 @@ const products = [{
   id: 14,
   name: '低噪声信号调理电路',
   imageUrl: require('../assets/images/低噪声信号调理电路.png')
+},
+{
+  id: 15,
+  name: '4一25通道温控仪',
+  imageUrl: require('../assets/images/4一25通道温控仪/4一25通道温控仪.png')
 }
   // 添加更多
 ]
