@@ -40,6 +40,9 @@
   padding: 0;
   margin: 0;
 }
+#app {
+  width: 100%;
+}
 .container {
   max-width: 900px;
 }
@@ -128,5 +131,17 @@ nav img {
 
 .scroll-to-top:hover {
   background-color: #0056b3;
+}
+/* 在移动端时候的一些变化 */
+@media (max-width: 600px) {
+  .title {
+    display: none;
+  }
+  nav {
+    padding: 15px 30px;
+  }
+  nav a {
+    margin-right: 20px;
+  }
 }
 </style>

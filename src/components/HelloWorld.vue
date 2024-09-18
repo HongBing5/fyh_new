@@ -30,11 +30,6 @@ export default {
   margin-top: 100px;
 }
 
-.el-carousel__item {
-  /* width: 1500px; */
-  min-width: 300px;
-}
-
 .el-carousel__item h3 {
   color: #475669;
   font-size: 18px;
